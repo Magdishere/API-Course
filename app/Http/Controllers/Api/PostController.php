@@ -81,10 +81,26 @@ class PostController extends Controller
 
         if($post){
 
-            return $this->apiResponse(new PostResource($post),'Changes saved successfully',201);
+            return $this->apiResponse(new PostResource($post),'Changes saved successfully',200);
 
         }
 
         return $this->apiResponse(null,'Changes failed',400);
+    }
+
+    public function destory($id){
+
+        $post = Post::find($id);
+
+        if(!$post){
+
+            return $this->apiResponse(null,'Post does not exist',400);
+
+        }
+
+        $post->delete($id);
+
+        return $this->apiResponse(null,'Post deleted successfully',200);
+
     }
 }
