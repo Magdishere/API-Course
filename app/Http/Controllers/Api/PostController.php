@@ -54,4 +54,37 @@ class PostController extends Controller
 
         return $this->apiResponse(null,'Creation failed',400);
     }
+
+    public function update(Request $request, $id){
+
+        $validator = Validator::make($request->all(),[
+
+            'title' => 'required|max:255',
+            'body' => 'required',
+
+        ]);
+
+        if($validator->fails()){
+
+            return $this->apiResponse(null,$validator->errors(),400);
+        }
+
+        $post = Post::find($id);
+
+        if(!$post){
+
+            return $this->apiResponse(null,'Post does not exist',400);
+
+        }
+
+        $post->update($request->all());
+
+        if($post){
+
+            return $this->apiResponse(new PostResource($post),'Changes saved successfully',201);
+
+        }
+
+        return $this->apiResponse(null,'Changes failed',400);
+    }
 }
