@@ -65,12 +65,12 @@
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">title</label>
                                     <input type="text" name="title" value="{{$post->title}}" class="form-control"
-                                           required>
+                                        required>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">body</label>
                                     <textarea class="form-control" name="body" id="exampleFormControlTextarea1"
-                                              rows="3" required>{{$post->body}}</textarea></div>
+                                            rows="3" required>{{$post->body}}</textarea></div>
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">

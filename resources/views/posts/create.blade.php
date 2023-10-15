@@ -68,7 +68,7 @@
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">body</label>
                                     <textarea class="form-control" name="body" id="exampleFormControlTextarea1"
-                                              rows="3"></textarea></div>
+                                            rows="3"></textarea></div>
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">

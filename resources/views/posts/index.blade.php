@@ -65,7 +65,7 @@
                                 <td>{{$post->body}}</td>
                                 <td>{{$post->created_at}}</td>
                                 <td>
-                                    <a href="{{route('posts.edit',$post->id)}}" class="btn btn-primary btn-sm" role="button" aria-disabled="true">Edit</a>
+                                    <a href="{{route('posts.edit',$post->id)}}" class="btn btn-success btn-sm" role="button" aria-disabled="true">Edit</a>
                                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete_post{{$post->id}}">Delete</button>
                                 </td>
                             </tr>

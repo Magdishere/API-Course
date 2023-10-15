@@ -11,7 +11,7 @@
                 @method('DELETE')
                 @csrf
             <div class="modal-body">
-              <label> Are you sure you want to delete the post?</label> <span class="text-danger">{{$post->title}}</span>
+                <label> Are you sure you want to delete the post?</label> <span class="text-danger">{{$post->title}}</span>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
